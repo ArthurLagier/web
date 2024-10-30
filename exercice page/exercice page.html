@@ -1,0 +1,667 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" IE="edge" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <title>
+        exercice page
+    </title>
+    <body>
+        
+
+    <style>
+      body
+      {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+        .container /*contient les explications courte de ce qu'apporte l'entreprise*/
+        {
+            height: 523px;
+            width: 677px;
+            position: absolute;
+            top: 280px;
+            left: 190px;
+        }
+        .welc
+        {
+          width: 288px;
+          height: 54px;
+          background-color: #FFFFFF;
+          border-radius: 10px;
+        }
+        .service
+        {
+            height: 30px;
+            width: 549px;
+            display: grid;
+            grid-template: 10px ;
+
+        }
+        .mark /*bulle de texte Mark*/
+        {
+            height: 26.19px;
+            width: 91.65px;
+            border-radius: 19.8px;
+            background-color: #FAFAFA;
+           color: #279E73;
+            position: absolute;
+            text-align: center;
+            line-height: 26.19px;
+            top: 633.8px;
+            left: 1655.96px;
+
+        }
+        .Lucy /*bulle de texte Lucy*/
+        {
+            height: 67.3px;
+            width: 241.58px;
+            border-radius: 34.51px;
+            background-color: #FAFAFA;
+           color: #494949;
+           font-size: 30px;
+            position: absolute;
+            text-align: center;
+            line-height: 67.3px;
+            top: 449.4px;
+            left: 915px;
+
+        }
+        .com_box2 /* critique de Mark Anderson*/
+        {
+            width: 448.81px;
+            height: 202.66px;
+            background-color: #FFFFFF;
+            position: absolute;
+            border-radius: 18px  18px 18px 18px;
+            top: 565.21px;
+            left: 1004px;
+        }
+        .back_circ
+        {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background-color: #B16EE5; 
+        position: absolute;
+        top: 244px;
+        left: 550px;
+        }
+        .back_squar
+        {
+          height: 28.04px;
+          width: 28.04px;
+          border:solid 4px #6CE1B7;
+          position: absolute;
+          top: 279.7px;
+          left: 897px;
+          transform: rotate(-26.62deg);
+        }
+        .back_triang
+        {
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border: solid 8px ;
+          border-color: transparent transparent #F8C953 transparent;
+          border-width: 0 20px 33px 20px;
+          top: 681.28px;
+          left: 680px;
+          transform: rotate(-20.81deg);
+        }
+        .back_triang2
+        {
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border: solid 8px ;
+          border-color: transparent transparent #4B4AEF transparent;
+          border-width: 0 10px 18px 10px;
+          top: 690.28px;
+          left: 690px;
+          transform: rotate(-20.81deg);
+        }
+        .com_box /* critique de Lucy Niana*/
+        {
+            width: 375.08px;
+            height: 168.19px;
+            background-color: #FFFFFF;
+            position: absolute;
+            border-radius: 18px  18px 18px 18px;
+            top: 317.28px;
+            left: 1363.91px;
+        }
+        .sign_up
+        {
+          width: 171px;
+            height: 60px;
+            background-color: #FFCA1D;
+            border-radius: 10px;
+            color: #1F1F1F;
+            font-size: 24px;
+            text-align: center;
+            line-height: 60px;
+            position: absolute;
+            top: 76px;
+            left: 1559px;
+
+        }
+        .login
+        {
+          width: 61px;
+            height: 30px;
+            color: #757575;
+            font-size: 24px;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            top: 91px;
+            left: 1453px;
+        }
+
+        .done
+        {
+            width: 82.05px;
+            height: 32.59px;
+            background-color: #3ADAD9;
+            color: #FFFFFF;
+            position: absolute;
+            border-radius: 7.03px;
+            text-align: center;
+            line-height: 32.59px;
+            top: 330.09px;
+            left: 1633.49px;
+        }
+        .pending
+        {
+            width: 112.2px;
+            height: 39.27px;
+            border-radius: 8.42px;
+            background-color: #FD9B79;
+            margin: 10px 310px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 39.27px;
+        }
+        .circ 
+        {
+          width: 223px;
+          height: 223px;
+          border-radius: 50%;
+          position: relative;
+          top: 555px;
+          left: 1490px;
+        }
+
+.circ::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 5px; /* adjust the thickness of the border */
+  background-color: #FFFFFF; /* adjust the color */
+  mask: 
+    linear-gradient(#0000 0 0) content-box,
+    repeating-conic-gradient(
+      from calc(var(--long)/2),
+      #000 0 calc(360deg/var(--numb) - var(--long)),
+      #0000 0 calc(360deg/var(--numb))
+    );
+  mask-composite: intersect;
+  --numb: 12; /* control the number of dashes */
+  --long: 8deg; /* control the distance between dashes */
+}
+.circ2 {
+  width: 310.6px;
+  height: 310.6px;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: 1013px;
+  rotate: 23deg;
+}
+
+.circ2::after { /*cercle a pointillé*/
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 7px; /* épaisseur du cercle */
+  background-color: #FFFFFF;
+  mask: 
+    linear-gradient(#0000 0 0) content-box,
+    repeating-conic-gradient(
+      from calc(var(--long)/2),
+      #000 0 calc(360deg/var(--numb) - var(--long)),
+      #0000 0 calc(360deg/var(--numb))
+    );
+  mask-composite: intersect;
+  --numb: 8; /* nombres de pointillé*/
+  --long: 24deg; /* distance entre pointillé */
+}
+.star {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 150px;
+  left: 500px;
+}
+
+.mouscirc
+{
+    width: 28.13px;
+    height: 28.13px;
+    border-radius: 50%;
+    border:solid 2.34px #F8C953;
+    position: absolute;
+    left: 1690.92px;
+    top: 450.11px;
+}
+
+
+
+.whyus
+{
+  height: 102px;
+  width: 534px;
+  font-size: 30px;
+  position: absolute;
+  top: 1131px;
+  left: 195px;
+}
+.logobox
+{
+width: 797px;
+height: 108px;
+display: flex;
+flex-wrap: nowrap;
+justify-content:space-between;
+position: absolute;
+top: 1128px;
+left: 992px;
+}
+
+
+
+.ability
+{
+  width: 1540px;
+  height: 596px;
+  position: absolute;
+  text-align: center;
+  font-size: 48px;
+  top: 1396px;
+  left: 150px;
+
+}
+.ability :nth-child(n+2)
+{
+  position: absolute;
+  display: grid;
+  flex-wrap: nowrap;
+  align-items:start;
+  justify-content: space-between;
+}
+.abilities
+ {
+  width: 417px;
+height: 315px;
+top: 407px;
+font-size: 20px;
+color: #585858;
+;
+ }
+ .abilities2
+ {
+  width: 450px;
+height: 315px;
+top: 407px;
+left: 556px;
+font-size: 20px;
+color: #585858;
+ }
+ .abilities3
+ {
+  width: 420px;
+height: 315px;
+top: 407px;
+left: 1135px;
+font-size: 20px;
+color: #585858;
+ }
+ .growth
+ {
+  width: 102px;
+  height: 102px;
+  border-radius: 20px;
+  position: absolute;
+  top: -220px;
+  left: 160px;
+  background-color: #FED369;
+ }
+.ding
+{
+  width: 102px;
+  height: 102px;
+  border-radius: 20px;
+  position: absolute;
+  top: -220px;
+  left: 170px;
+  background-color: #3ADAD9;
+}
+.zoom
+{
+  width: 102px;
+  height: 102px;
+  border-radius: 20px;
+  position: absolute;
+  top: -220px;
+  left: 170px;
+  background-color: #FD9B79;
+}
+.bus
+{
+  width: 240px;
+  position: absolute;
+  top: -70px;
+  left: 105px;
+  font-size: 24px;
+  color:#2B3377;
+}
+.Fin
+{
+  width: 240px;
+  position: absolute;
+  top: -70px;
+  left: 120px;
+  font-size: 24px;
+  color:#2B3377;
+}
+.Ana
+{
+  width: 240px;
+  position: absolute;
+  top: -70px;
+  left: 405px;
+  font-size: 24px;
+  color:#2B3377;
+}
+.features
+{
+  width: 1540px;
+height: 839px;
+position: absolute;
+display: flex;
+flex-wrap: wrap;
+top: 2042px;
+left: 190px;
+}
+.our{
+  width: 296px;
+height: 71px;
+position: absolute;
+top: -50px;
+left: 621px;
+font-size: 48px;
+color: #565656;
+}
+
+.feat
+{
+  width: 732px;
+height: 678px;
+position: absolute;
+top: 159px;
+left: 10px;
+border:2px solid #D7D7EB;
+border-radius: 50%;
+}
+.feat2
+{
+  width: 504px;
+height: 504px;
+top: 90px;
+left: 110px;
+position: absolute;
+border:2px solid #D7D7EB;
+border-radius: 50%;
+}
+.feat3
+{
+  width: 292px;
+height: 292px;
+position: absolute;
+border:2px solid #D7D7EB;
+border-radius: 50%;
+top: 95px;
+left: 105px;
+}
+.marking
+{
+  width: 485px;
+height: 311px;
+position: absolute;
+color: #4A4A4A;
+font-size: 40px;
+line-height: -20px;
+top: 159px;
+left: 890px;
+}
+.marking2
+{
+  width: 685px;
+  height: 152px;
+  position: absolute;
+  top: 159px;
+  line-height: 40px;
+  color: #575757;
+  font-size: 24px;
+}
+.com_box3 /*Critique de Angelina*/
+{
+  width: 314px;
+height: 158px;
+font-size: 16px;
+background-color: #FFFFFF;
+color: #3B4EB2;
+position: absolute;
+top: 78px;
+left: 177px;
+border-radius: 19.15px
+/*filter:drop-shadow(10px 5px 30px #afafb3);*/
+}
+.onlin_circ
+{
+  width: 14px;
+height: 14px;
+position: absolute;
+top: 45px;
+left: 75px;
+background-color:#41A86A;
+border:1.5px solid #FFFFFF;
+border-radius: 50%;
+}
+.message
+{
+  width: 105px;
+height: 35px;
+position: absolute;
+background-color: #FFCA1D;
+color: #3A3A3A;
+left: 200px;
+top: 90px;
+text-align: center;
+line-height: 35px;
+border-radius: 8px
+}
+.line_circ
+{
+  width: 80px;
+height: 80px;
+position: absolute;
+top: 336px;
+left: 430px;
+border-radius: 50%;
+background-color: #EDF1FF;
+}
+.back_circ2
+{
+  width: 18px;
+height: 18px;
+position: absolute;
+top: 320px;
+left: 764px;
+background-color: #F3648F;
+border-radius: 50%;
+}
+.back_circ3
+{
+  width: 20px;
+height: 20px;
+position: absolute;
+top: 620px;
+left: 25px;
+background-color:#64B7F3;
+border-radius: 50%;
+}
+.back_circ4
+{
+  width: 14px;
+height: 14px;
+position: absolute;
+top: 160px;
+left: 65px;
+background-color:#ECC84A;
+border-radius: 50%;
+}
+.back_circ5
+{
+  width: 12px;
+height: 12px;
+position: absolute;
+top: 440px;
+left: 265px;
+background-color:#3ED37A;
+border-radius: 50%;
+}
+.back_circ6
+{
+  width: 8px;
+height: 8px;
+position: absolute;
+top: -5px;
+left: 465px;
+background-color:#EC7B4A;
+border-radius: 50%;
+}
+.back_circ7
+{
+  width: 8px;
+height: 8px;
+position: absolute;
+top: 80px;
+left: 70px;
+background-color:#4A81EC;
+border-radius: 50%;
+}
+.boost
+{
+  width: 206px;
+height: 65px;
+position: absolute;
+background-color:#FFFFFF;
+color: #2F4BDF;
+display: flex;
+line-height: 65px;
+justify-content: space-around;
+font-size: 14px;
+top: 480px;
+left: 264px;
+border-radius: 10px 
+}
+    p
+        {
+            margin: 10px 30px 10px;
+            line-height: 20px;
+        }
+a{
+  color:#FED369 ;
+}
+
+</style>
+
+
+
+
+    <img src="Rectangle 38.png" style="position: absolute; left: 16px; top: 16px;;">
+    <img src="Rectangle 36.png" style="position: absolute; left: 16px; top: 16px;;">
+    <img src="Group 51.png" style="position:absolute; left: 679px; top: 93px;;">
+    <img src="Mask Group.png" style="position:absolute; left: 1046.26px; top: 261.31px; filter: drop-shadow(10px 5px 30px #afafb3);;">
+    <img src="Header_Text.png" style="position: absolute; left: 190px; top: 280px;"><!--contenaire, à remplacer-->
+    <img src="Logo.png" style="position: absolute; left: 190px; top: 97px;"><!--logo-->
+    <img src="Group 54.png" style="position: absolute; left: 1514.05px; top: 578.05px;"><!--image de mark-->
+    <img src="Group 45.png" style="position: absolute; left: 722px; top: 495px;"><!--curseur  à coté du contenaire-->
+    <div class="circ"></div>
+    <div class="mark">Mark</div>
+    <div class="back_circ"></div>
+    <div class="com_box" style="color: #6C71A1; font-size: 18.75px"><br><br><p>Lucy Niana</p><div style="color: #2B3377; font-size:21.1px"><p><b>Develop Communication Plan</b></p></div></div>
+    <div class="done" style="font-size: 19.93px;">Done</div>
+    <div class="mouscirc"></div>
+    <img src="Vector 2.png" style="position:absolute; left: 1661.17px; top: 456.34px;">
+    <div class="circ2"></div>
+    <div class="Lucy">Lucy</div>
+    <div class="com_box2" style="color: #6C71A1; font-size: 18.75px"><div class="pending">Pending</div><p>Mark Anderson</p><div style="color: #2B3377; font-size:21.1px"><p><b>Update Contract Agreement</b></p></div></div>
+    <div class="back_squar"></div>
+    <div class="sign_up">Sign Up</div>
+    <div class="login">Login</div>
+    <div class="back_triang"></div>
+    <div class="back_triang2"></div>
+
+
+    <div class="whyus"><b>See why over 100,000 teams choose Teamflow.com</b></div>
+    <div class="logobox"><img src="image 1.png"><img src="image 2.png"><img src="image 3.png"><img src="image 4.png"></div>
+
+
+    <div class="ability">What you <a>can do?</a> 
+    
+    <div class="abilities"><div class="growth"><img src="graph 1.png" style="position: absolute; top: 26px; left: 26px;"></div>
+    <div class="bus"><b>Business Planing</b></div>Our Business Plan is a written document describing a company’s core business activities.</div>
+    
+    <div class="abilities2"><div class="ding"><img src="success 1.png" style="position: absolute; top: 26px; left: 26px;"></div>
+    <div class="Fin"><b>Financial planning</b></div>Our expert team sensible decision about their money, to ensure they achieve the life goals. A financial plan.</div>
+    
+    <div class="abilities3"><div class="zoom"><img src="Group 15.png" style="position: absolute; top: 26px; left: 26px;"></div>
+    <div class="Fin"><b>Market Analysis</b></div>A market analysis is a quantitative and qualitative assessment of a market. It looks into the size of the market.</div>
+    </div>
+
+
+    <div class="features"><div class="Our">Our <a>Features</a></div>
+    <div class="feat"><img src="Ellipse (3).png" style=" position:absolute;top: 150px;"><div class="back_circ3"></div><div class="back_circ7"></div>
+      <div class="feat2"><img src="Ellipse (1).png" style=" position:absolute;top: 420px; left: 90px;"><div class="boost"><img src="fast-charge 1.png"><b>Boost your work</b></div>
+        <div class="feat3"><img src="Ellipse.png" style=" position:absolute;top: 90px; left: 90px;"></div>
+        <img src="Ellipse (2).png" style=" position:absolute;top: 160px; left: 360px;">
+        <div class="line_circ"></div>
+        <img src="Group 27 (1).png" style="position: absolute; top: 200px; left:440px;">
+        <div class="back_circ4"></div>
+        <div class="back_circ5"></div>
+        <div class="back_circ6"></div>
+      </div>
+        <div class="com_box3"><img src="Ellipse (4).png" style="position: absolute; top: 10px; left: 40px;"><div class="message">Message</div>
+        <div class="onlin_circ"></div><div style="color:#38C73E; font-size: 14px; text-align: end; margin: 10px;"><b>Task Done</div><br><br><p>Angelina</p></b><div style="color: #7F86AE; font-size: 14px; margin: 0px 30px;">Member T2M Team</div></div>
+        <div class="back_circ2"></div>
+      </div>
+    <div class="marking">Manage everything in one workspace
+      <div class="marking2">Planning, tracking and delivering your team’s best work has never been easier. An integrated workspace that’s simple to use, TeamFlow lets you spend less time managing your work and more time actually doing it.</div>    </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+
+</html>
