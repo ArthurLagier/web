@@ -19,10 +19,13 @@
         .container /*contient les explications courte de ce qu'apporte l'entreprise*/
         {
             height: 523px;
-            width: 677px;
+            width: 620px;
             position: absolute;
             top: 280px;
             left: 190px;
+            font-size: 64px;
+            color: #FFFFFF;
+            line-height: 80px;
         }
         .welc
         {
@@ -30,6 +33,61 @@
           height: 54px;
           background-color: #FFFFFF;
           border-radius: 10px;
+        }
+        .yelbox
+        {
+          width: 230px;
+          height: 70px;
+          border-radius: 10px;
+          background-color: #FFCA1D;
+          font-size: 26px;
+          text-align: center;
+          line-height: 70px;
+          color: #2C2C2C;
+        }
+        .navbar
+        {
+          width: 549px;
+          height: 30px;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content:space-between;
+          position: absolute;
+          top: 93px;
+          left: 679px;
+          font-size: 24px;
+          color: #FFFFFF;
+        }
+        .product
+        {
+          width: 114px;
+          height: 30px;
+        }
+        .solution
+        {
+          width: 120px;
+          height: 30px;
+        }
+        .enterprise
+        {
+          width: 117px;
+          height: 30px;
+        }
+        .Pricing
+        {
+          width: 78px;
+          height: 30px;
+        }
+        .arrow
+        {
+          width: 7px;
+          height: 7px;
+          background-color: transparent;
+          border: solid 2px;
+          border-color:transparent  transparent #FFFFFF #FFFFFF;
+          position: absolute;
+          transform: rotate(-45deg);
+
         }
         .service
         {
@@ -74,9 +132,11 @@
             height: 202.66px;
             background-color: #FFFFFF;
             position: absolute;
-            border-radius: 18px  18px 18px 18px;
+            border-radius: 18px;
             top: 565.21px;
             left: 1004px;
+            font-size: 25px;
+            line-height: 30px;
         }
         .back_circ
         {
@@ -134,7 +194,7 @@
         }
         .sign_up
         {
-          width: 171px;
+            width: 171px;
             height: 60px;
             background-color: #FFCA1D;
             border-radius: 10px;
@@ -149,7 +209,7 @@
         }
         .login
         {
-          width: 61px;
+            width: 61px;
             height: 30px;
             color: #757575;
             font-size: 24px;
@@ -240,14 +300,6 @@
   --numb: 8; /* nombres de pointillé*/
   --long: 24deg; /* distance entre pointillé */
 }
-.star {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: relative;
-  top: 150px;
-  left: 500px;
-}
 
 .mouscirc
 {
@@ -284,7 +336,15 @@ left: 992px;
 }
 
 
-
+.our{
+  width: 296px;
+height: 71px;
+position: absolute;
+top: -50px;
+left: 621px;
+font-size: 48px;
+color: #565656;
+}
 .ability
 {
   width: 1540px;
@@ -294,6 +354,7 @@ left: 992px;
   font-size: 48px;
   top: 1396px;
   left: 150px;
+  color: #565656;
 
 }
 .ability :nth-child(n+2)
@@ -398,16 +459,6 @@ flex-wrap: wrap;
 top: 2042px;
 left: 190px;
 }
-.our{
-  width: 296px;
-height: 71px;
-position: absolute;
-top: -50px;
-left: 621px;
-font-size: 48px;
-color: #565656;
-}
-
 .feat
 {
   width: 732px;
@@ -422,7 +473,7 @@ border-radius: 50%;
 {
   width: 504px;
 height: 504px;
-top: 90px;
+top: 70px;
 left: 110px;
 position: absolute;
 border:2px solid #D7D7EB;
@@ -467,6 +518,7 @@ font-size: 16px;
 background-color: #FFFFFF;
 color: #3B4EB2;
 position: absolute;
+box-shadow: 10px 10px 10px #FAFAFF;
 top: 78px;
 left: 177px;
 border-radius: 19.15px
@@ -505,6 +557,36 @@ top: 336px;
 left: 430px;
 border-radius: 50%;
 background-color: #EDF1FF;
+}
+.line_circ2{
+width: 80px;
+height: 80px;
+position: absolute;
+top: 142px;
+left: -20px;
+border-radius: 50%;
+opacity: 15%;
+background-color:#FD9B79;
+}
+.line_circ3{
+width: 80px;
+height: 80px;
+position: absolute;
+top: 100px;
+left: 620px;
+border-radius: 50%;
+opacity: 15%;
+background-color:#3ADAD9;
+}
+.line_circ4{
+width: 80px;
+height: 80px;
+position: absolute;
+top: -30px;
+left: 160px;
+border-radius: 50%;
+opacity: 100%;
+background-color:#EDF1FF;
 }
 .back_circ2
 {
@@ -581,15 +663,247 @@ top: 480px;
 left: 264px;
 border-radius: 10px 
 }
+.setup
+{
+  width: 1882px;
+height: 700px;
+top: 3019px;
+left: 16px;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: space-around;
+  background-color: #FAFAFF;
+  color:#4A4A4A;
+}
+
+.settext
+{
+  width: 660px;
+height: 289px;
+font-size: 40px;
+top: 3204px;
+left: 187px;
+
+}
+.smartboy
+{
+  width: 660px;
+  height: 500px;
+}
+.back_circ8
+{
+  width: 365px;
+height: 364px;
+top: 3222px;
+left: 1237px;
+}
+.integrate
+{
+  width: 1268px;
+height: 592px;
+position: absolute;
+top: 3980px;
+left: 326px;
+font-size: 48px;
+}
+.integrate :nth-child(n+1)
+{
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.integrate :nth-child(4)
+{
+  margin: 10px 0px -30px;
+}
+.integrate :nth-child(6)
+{
+  margin: 10px 10px;
+}
+.inter
+{
+  width: 767px;
+height: 142px;
+}
+.fillbox
+{
+  width: 1268px;
+height: 180px;
+border-radius: 20px
+}
+.save
+{
+  width: 1540px;
+height: 680px;
+position: absolute;
+top: 4782px;
+left: 190px;
+display: flex;
+justify-content: space-between;
+}
+.savebox
+{
+  width: 650px;
+height: 289px;
+font-size: 40px;
+color: #4A4A4A;
+margin-top: 150px;
+line-height: 40px;
+}
+.Visualize
+{
+  width: 1882px;
+height: 836px;
+position: absolute;
+top: 5612px;
+left: 16px;
+background-color: #FAFAFF;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.visualbox
+{
+  width: 648px;
+height: 213px;
+font-size: 40px;
+line-height: 40px;
+}
+.visualphoto
+{
+  width: 629px;
+height: 651px;
+}
+.support{
+width: 1463.95px;
+height: 704px;
+position: absolute;
+display: flex;
+align-items: center;
+top: 6708px;
+left: 228px;
+}
+.supportimage
+{
+  width: 645.32px;
+height: 704px;
+}
+.back_squar2{
+width: 247.28px;
+height: 428.12px;
+position: absolute;
+top: -20px;
+left: -20px;
+background-color: #3ADAD9;
+}
+.back_squar3{
+  width: 105.98px;
+height: 190.09px;
+position: absolute;
+top: 350px;
+left: 400px;
+background-color: #FED369;
+}
+.com_box4
+{
+  width: 437.37px;
+height: 201.86px;
+font-size: 20.19px;
+border-radius: 19.15px;
+position: absolute;
+text-align: center;
+top: 500px;
+left: 200px;
+background-color: #FFFFFF;
+box-shadow: 10px 10px 10px #FAFAFF;
+}
+.supportbox
+{
+  width: 680px;
+height: 391px;
+font-size: 40px;
+line-height: 40px;
+margin-bottom: 200px;
+margin-left: 50px;
+}
+.testimonials
+{
+  width: 1652px;
+height: 954px;
+position: absolute;
+text-align: center;
+font-size: 48px;
+top: 7592px;
+left: 149px;
+}
+.testimonde
+{
+  width: 1652px;
+height: 694.64px;
+}
+.testibox
+{
+  width: 400px;
+  height: 220px;
+  position:  relative;
+  font-size: 22px;
+  top: -660px;
+  left: 680px;
+  line-height: 40px;
+  color: #3c405f;
+}
+.subscribe
+{
+  width: 1882px;
+height: 483px;
+top: 8693px;
+left: 19px;
+position: absolute;
+background-color: #FAFAFF;
+display: flex;
+flex-direction: column;
+align-items: center;
+color:#EB801D;
+font-size: 24px;
+line-height: 60px;
+}
+.subsec
+{
+  width: 640px;
+height: 72px;
+border-radius: 20px;
+background-color: #FFFFFF;
+margin-top: 80px;
+display: flex;
+align-items:center;
+}
+.subbutton
+{
+  width: 180px;
+height: 58px;
+border-radius: 20px;
+background-color: #686DF1;
+display: flex;
+align-items:center;
+margin-left: 250px;
+}
     p
         {
             margin: 10px 30px 10px;
-            line-height: 20px;
+            line-height: 25px;
         }
-a{
+font{
   color:#FED369 ;
 }
-
+.line
+{
+  width: 70px;
+  height: 6px;
+  border-radius: 6px;
+  position: absolute;
+}
 </style>
 
 
@@ -597,34 +911,57 @@ a{
 
     <img src="Rectangle 38.png" style="position: absolute; left: 16px; top: 16px;;">
     <img src="Rectangle 36.png" style="position: absolute; left: 16px; top: 16px;;">
-    <img src="Group 51.png" style="position:absolute; left: 679px; top: 93px;;">
-    <img src="Mask Group.png" style="position:absolute; left: 1046.26px; top: 261.31px; filter: drop-shadow(10px 5px 30px #afafb3);;">
-    <img src="Header_Text.png" style="position: absolute; left: 190px; top: 280px;"><!--contenaire, à remplacer-->
-    <img src="Logo.png" style="position: absolute; left: 190px; top: 97px;"><!--logo-->
-    <img src="Group 54.png" style="position: absolute; left: 1514.05px; top: 578.05px;"><!--image de mark-->
-    <img src="Group 45.png" style="position: absolute; left: 722px; top: 495px;"><!--curseur  à coté du contenaire-->
+    
+    <img src="Logo.png" style="position: absolute; left: 190px; top: 97px;">
+    <div class="navbar">
+      <div class="product">Product</div>
+      <div class="solution">Solution</div>
+      <div class="enterprise">Enterprise</div>
+      <div class="Pricing">Pricing</div>
+      <div class="arrow" style="left: 95px; top: 5px;"></div>
+      <div class="arrow" style="left: 250px; top: 5px;"></div>
+    </div>
+    <div class="sign_up">Sign Up</div>
+    <div class="login">Login</div>
+
+    <div class="container">
+      <div class="welc" style="font-size:20px; color: #606060; line-height: 50px;">👋 Welcome to TeamFlow</div><div style="padding: 10px 0px;">Work the way that works for you</div>
+      <div class="line" style="background-color: #3ADAD9; top: 250px;"></div>
+      <div style="font-size: 30px; line-height: 50px;"><br><br>Create, Build, Collaborate and ship products very faster </div>
+      <div class="yelbox" style="position: absolute;top: 480px;left: 0px;">Get Started</div>
+    </div>
+
+    <img src="Group 45.png" style="position: absolute; left: 722px; top: 495px;"><!--curseur  à coté du texte de Lucy-->
+
+    <img src="Group 54.png" style="position: absolute; left: 1514.05px; top: 578.05px;"><!--image de Mark-->
     <div class="circ"></div>
     <div class="mark">Mark</div>
+
+    <img src="Mask Group.png" style="position:absolute; left: 1046.26px; top: 261.31px; filter: drop-shadow(10px 5px 30px #afafb3);;"><!--Image de Lucy-->
+    <div class="circ2"></div>
+    <div class="Lucy">Lucy</div>
+
     <div class="back_circ"></div>
-    <div class="com_box" style="color: #6C71A1; font-size: 18.75px"><br><br><p>Lucy Niana</p><div style="color: #2B3377; font-size:21.1px"><p><b>Develop Communication Plan</b></p></div></div>
+    <div class="com_box" style="color: #6C71A1; font-size: 18.75px"><br><p>Lucy Niana</p><div style="color: #2B3377; font-size:21.1px"><p><b>Develop Communication Plan</b></p>
+    <img src="Group 7.png" style="position: absolute; top: 125px; left: 30px;"></div></div>
     <div class="done" style="font-size: 19.93px;">Done</div>
     <div class="mouscirc"></div>
     <img src="Vector 2.png" style="position:absolute; left: 1661.17px; top: 456.34px;">
-    <div class="circ2"></div>
-    <div class="Lucy">Lucy</div>
-    <div class="com_box2" style="color: #6C71A1; font-size: 18.75px"><div class="pending">Pending</div><p>Mark Anderson</p><div style="color: #2B3377; font-size:21.1px"><p><b>Update Contract Agreement</b></p></div></div>
+
+    <div class="com_box2" style="color: #6C71A1;"><div class="pending" style="font-size: 18.75px;">Pending</div><p>Mark Anderson</p><div style="color: #2B3377;"><p><b>Update Contract Agreement</b></p>
+    <img src="Group 8.png" style="position: absolute; top: 150px; left: 30px;"></div></div>
     <div class="back_squar"></div>
-    <div class="sign_up">Sign Up</div>
-    <div class="login">Login</div>
     <div class="back_triang"></div>
     <div class="back_triang2"></div>
+
 
 
     <div class="whyus"><b>See why over 100,000 teams choose Teamflow.com</b></div>
     <div class="logobox"><img src="image 1.png"><img src="image 2.png"><img src="image 3.png"><img src="image 4.png"></div>
 
 
-    <div class="ability">What you <a>can do?</a> 
+
+    <div class="ability">What you <font>can do?</font> 
     
     <div class="abilities"><div class="growth"><img src="graph 1.png" style="position: absolute; top: 26px; left: 26px;"></div>
     <div class="bus"><b>Business Planing</b></div>Our Business Plan is a written document describing a company’s core business activities.</div>
@@ -637,11 +974,13 @@ a{
     </div>
 
 
-    <div class="features"><div class="Our">Our <a>Features</a></div>
-    <div class="feat"><img src="Ellipse (3).png" style=" position:absolute;top: 150px;"><div class="back_circ3"></div><div class="back_circ7"></div>
+
+    <div class="features"><div class="Our">Our <font>Features</font></div>
+    <div class="feat"><img src="007-chat 1.png" style="position: absolute; top: 115px; left: 635px;"><div class="line_circ3"></div>
+    <img src="Ellipse (3).png" style=" position:absolute;top: 150px;"><div class="back_circ3"></div><div class="back_circ7"></div>
       <div class="feat2"><img src="Ellipse (1).png" style=" position:absolute;top: 420px; left: 90px;"><div class="boost"><img src="fast-charge 1.png"><b>Boost your work</b></div>
-        <div class="feat3"><img src="Ellipse.png" style=" position:absolute;top: 90px; left: 90px;"></div>
-        <img src="Ellipse (2).png" style=" position:absolute;top: 160px; left: 360px;">
+        <div class="feat3"><img src="001-meeting 1.png" style="position: absolute; top: 156px; left: -5px;"><div class="line_circ2"></div><img src="Ellipse.png" style=" position:absolute;top: 90px; left: 90px;"></div>
+        <div class="line_circ4"></div><img src="023-business presentation 1.png" style="position:absolute;top: -15px; left: 170px;"><img src="Ellipse (2).png" style=" position:absolute;top: 160px; left: 360px;">
         <div class="line_circ"></div>
         <img src="Group 27 (1).png" style="position: absolute; top: 200px; left:440px;">
         <div class="back_circ4"></div>
@@ -649,19 +988,76 @@ a{
         <div class="back_circ6"></div>
       </div>
         <div class="com_box3"><img src="Ellipse (4).png" style="position: absolute; top: 10px; left: 40px;"><div class="message">Message</div>
-        <div class="onlin_circ"></div><div style="color:#38C73E; font-size: 14px; text-align: end; margin: 10px;"><b>Task Done</div><br><br><p>Angelina</p></b><div style="color: #7F86AE; font-size: 14px; margin: 0px 30px;">Member T2M Team</div></div>
+        <div class="onlin_circ"></div><div style="color:#38C73E; font-size: 14px; text-align: end; margin: 10px;"><b>Task Done</div><br><br><p>Angelina</p></b>
+        <div style="color: #7F86AE; font-size: 14px; margin: 0px 30px;">Member T2M Team</div></div>
         <div class="back_circ2"></div>
       </div>
+
     <div class="marking">Manage everything in one workspace
-      <div class="marking2">Planning, tracking and delivering your team’s best work has never been easier. An integrated workspace that’s simple to use, TeamFlow lets you spend less time managing your work and more time actually doing it.</div>    </div>
+      <div class="line" style="top: 130px; background-color: #FED369;"></div>
+      <div class="marking2">Planning, tracking and delivering your team’s best work has never been easier. An integrated workspace that’s simple to use, TeamFlow lets you spend less time managing your work and more time actually doing it.</div>
+      </div>
     </div>
 
 
 
+    <div class="setup"><div class="settext">Set up in minutes
+      <div style="font-size:24px; color: #575757; line-height: 40px;"><br>Get started fast with hundreds of visual and customizable templates - or create your own. Use our free online template maker to create beautiful template in minutes.
+      Choose from hundreds of pre-made templates and tell stories with data
+       with our easy drag-and-drop infographic creator.</div><div class="line" style="top: 260px; background-color: #FED369;"></div></div><div class="smartboy"><img src="Group 65.png" style="position: absolute; top: 40px ; left: 900px; ;"></div>
+    </div>
 
 
+
+    <div class="integrate"><div class="inter" style="color: #565656; position: relative; left: 190px; text-align: center;"><font>Integrate</font>with your existing tools in a few click</div><div class="fillbox"><img src="image 21.png"><img src="image 19.png">
+      <img src="image 16.png"><img src="image 15.png" style="width: 20%;"><img src="image 17.png"></div><div class="yelbox" style="position: absolute; top: 500px; left: 450px;">View All</div>
+      <div class="back_circ3" style="position: absolute; top: 150px; left: 240px ; background-color: #0061ff;"></div><div class="back_circ3" style="position: absolute; top: 550px; left: 820px ; background-color: #0061ff;"></div></div>
+
+
+
+    <div class="save"><img src="Group 68.png">
+      <div class="savebox">Save time with Automations <div class="line" style="top: 260px; background-color: #FED369; position: relative; top: 20px;"></div> <div style="font-size: 24px; color: #575757;">
+        <br>Automate the repetitive work in seconds so you can avoid human error and focus on what matters. It gives the impression of software that its highly automated which implies that it is good for client for who want to save time and manage team members easily.</div>
+      </div>
+    </div>
+
+
+
+    <div class="Visualize"><div class="visualbox">Visualize work with Views<div class="line" style="top: 260px; background-color: #686df1; position: relative; top: 20px;"></div><div style="font-size: 24px; color: #575757;"><br>View data as a map, calendar, timeline, kanban, and more
+      The easy-to-use, visual interface lets any team member jump in and get started, no training required.</div></div><div class="visualphoto"><img src="Group 71.png"></div></div>
+
+
+
+      <div class="support">
+        <div class="back_squar2"></div><div class="back_squar3"></div><div class="supportimage"><img src="image 24.png" style="position: relative;"><img src="Group 42.png" style="position: relative; top: 140px;">
+        <div class="com_box4"><div style="width: 330px; margin-left: 30px; text-align: start;color:#3C405F;"><br>“We ensure that any information you need is served immediately by simply contacting our team”</div>
+        <br><br><br> <div style="font-size: 20.19px; margin-right: 220px;">Peter Fennimore</div><div style="color: #9c9FBB; text-align: end; margin-top: -25px;margin-right: 55px;">Head of CS</div>   
+        </div></div>
+        <div class="supportbox">24/7 Customer Support <div class="line" style="top: 260px; background-color: #FED369; position: relative; top: 20px;"></div>
+        <div style="font-size: 24px; color: #575757;"><br>Our team is here to give you personalized support within the hour available 24/7. In accordance with our commitment to providing superior and professional service. Join daily live webinars, watch our tutorials, or browse through our knowledge base</div><br>
+        <div class="yelbox">Read More</div>
+      </div>
+      </div>
+
+
+
+    <div class="testimonials">Client <div><font>Testimonials</font></div>
+    <div class="testimonde"><img src="Group 38.png" style="position: relative; top: 60px;">
+      <img src="Subtract.png" style="position: relative; top: -460px; left: 50px;"><img src="quote 1.png" style="position: absolute; top: 380px; left: 650px;">
+      <div class="testibox"><div style="font-size: 26px; color: #2d3150;">Rocky Dixon</div>“The features on monday.com make our team work faster and easier to organize”</div>
+    <img src="Ellipse (5).png" style="position: absolute; top: 290px; left: 825px;"><img src="Ellipse (6).png" style="position: absolute; top: 250px; left: 425px;">
+    <img src="Ellipse (7).png" style="position: absolute; top: 525px; left: 300px;"><img src="Ellipse (8).png" style="position: absolute; top: 750px; left: 550px;">
+    <img src="Ellipse (9).png" style="position: absolute; top: 750px; left: 1050px;"><img src="Ellipse (10).png" style="position: absolute; top: 525px; left: 1300px;">
+    <img src="Ellipse (11).png" style="position: absolute; top: 250px; left: 1200px;"></div>
+    </div>
+
+
+
+    <div class="subscribe"><br><br>Support<div  style="font-size: 40px; color: #2d3150;"><b>Subscribe Newsletter & get</b></div>
+    <div style="font-size: 36px; color: #2d3150;">Company News</div><div class="subsec"><img src="email 1.png" style="margin-left: 40px ;"><div style="color: #9092B0; margin-left: 20px;">Your Email</div>
+    <div class="subbutton"><img src="send 1.png" style="margin-left: 20px;"> <div style="color: #FFFFFF;">Subscribe</div></div></div></div>
+    </div>
 </body>
-
 
 
 </html>
