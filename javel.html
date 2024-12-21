@@ -1,0 +1,48 @@
+<!Doctype Html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" IE="edge" content="width=device-width, initial-scale=1.0">
+        <Title>
+            TEKIKE
+        </Title>
+    </head>
+
+        <body>
+        <div class="Key">niet</div>
+        <div class="oh">hello</div>
+        <input id="search" type="text" class="input" placeholder="put in (press space to send)"/>  
+    <div class="contain"></div>
+    <div class="MIAM">uuuuu</div>
+
+        <script>
+const textchange= document.querySelector('.oh')
+textchange.addEventListener('mouseover', function(){
+    textchange.style.color="red";
+    textchange.innerHTML="noooooo"
+ 
+    
+})
+const whololo= document.getElementById("search")
+whololo.addEventListener("keydown", function(e){
+    const bowl=document.createElement('p');
+    bowl.textContent=this;
+    document.getElementById("wool").appendChild(bowl);
+})
+
+const mouseBox = document.querySelector('.MIAM');
+mouseBox.addEventListener('click', function () { 
+    mouseBox.style.backgroundColor = 'red';
+    mouseBox.textContent = 'WOAH';
+});
+
+const keyput = document.querySelector('.Key');
+keyInput.addEventListener('keyup', function (e) {
+     displayKeyNumber.textContent = `${this.value.length}`;
+     console.log("this", this);
+     console.log("this.value", this.value);
+     console.log("keyInput.value", keyInput.value);
+   console.log("e.target.value", e.target.value);
+})
+        </script>      
+        </body>
