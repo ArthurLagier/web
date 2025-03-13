@@ -1,5 +1,5 @@
 import { error } from 'console';
-import cloudinary from '../config/cloudinary.js';
+import cloudinary from './config/cloudinary.js';
 import fs from 'fs';
 
 
