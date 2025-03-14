@@ -7,7 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 const PORT= process.env.PORT
 const app= express();
 app.use(express.json());
-/*
+
 const users=[
     {id:1,name:'amethis'},
     {id:2,name:'melia'},
@@ -58,7 +58,7 @@ const dishes=[
     {id:19,name:'pamplemousse' ,Price:41},
     {id:20,name:'citrouille' ,Price:120}
 ]
-*/
+
 
 app.use("/commandes", commandesRoutes);
 app.use("/plats", platsRoutes);

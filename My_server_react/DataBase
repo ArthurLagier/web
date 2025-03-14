@@ -75,14 +75,14 @@ USE jimmys_restaurant;*/
 (2, 5, 1, 10.99),
 (2, 7, 1, 14.50),
 (3, 9, 3, 5.50);*/
-SHOW TABLES;
+/*SHOW TABLES;
 SELECT * FROM users;
 SELECT * FROM commandes;
 SELECT * FROM plats;
 SELECT commandes.id AS id_commande, users.nom AS client, commandes.date_commande, commandes.statut, modes_paiement.nom AS mode_paiement, commandes.paiement_effectue
 FROM commandes
 JOIN users ON commandes.id_client = users.id
-LEFT JOIN modes_paiement ON commandes.id_paiement = modes_paiement.id;
-SELECT details_commande.id_commande, plats.nom AS plat, details_commande.quantite, details_commande.prix_unitaire
+LEFT JOIN modes_paiement ON commandes.id_paiement = modes_paiement.id;*/
+/*SELECT details_commande.id_commande, plats.nom AS plat, details_commande.quantite, details_commande.prix_unitaire
 FROM details_commande
-JOIN plats ON details_commande.id_plat = plats.id;
+JOIN plats ON details_commande.id_plat = plats.id;*/
