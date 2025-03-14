@@ -1,0 +1,88 @@
+/*CREATE DATABASE IF NOT EXISTS jimmys_restaurant;
+USE jimmys_restaurant;*/
+/*CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('client', 'admin') DEFAULT 'client'
+);*/
+/*CREATE TABLE categories (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL UNIQUE
+);*/
+/*CREATE TABLE modes_paiement (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL UNIQUE
+);*/
+/*CREATE TABLE types_cuisine (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL UNIQUE
+);*/
+/*CREATE TABLE types_cuisine (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL UNIQUE
+);*/
+/*CREATE TABLE plats (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    description TEXT,
+    prix DECIMAL(5,2) NOT NULL,
+    image VARCHAR(255),
+    id_categorie INT,
+    id_type_cuisine INT,
+    FOREIGN KEY (id_categorie) REFERENCES categories(id) ON DELETE SET NULL,
+    FOREIGN KEY (id_type_cuisine) REFERENCES types_cuisine(id) ON DELETE SET NULL
+);*/
+/*CREATE TABLE modes_paiement (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL UNIQUE
+);*/
+/*CREATE TABLE commandes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_client INT,
+    date_commande DATETIME DEFAULT CURRENT_TIMESTAMP,
+    statut ENUM('en cours', 'terminée', 'annulée') DEFAULT 'en cours',
+    id_paiement INT,
+    paiement_effectue BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (id_client) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_paiement) REFERENCES modes_paiement(id) ON DELETE SET NULL
+);*/
+
+/*INSERT INTO plats (nom, description, prix, image, id_categorie, id_type_cuisine) VALUES
+('Bruschetta', 'Pain grillé, tomate, ail, basilic', 5.99, 'bruschetta.jpg', 1, 1),
+('Pizza Margherita', 'Tomate, mozzarella, basilic', 10.99, 'margherita.jpg', 2, 1),
+('Pizza Pepperoni', 'Tomate, mozzarella, pepperoni', 12.99, 'pepperoni.jpg', 2, 1),
+('Cheeseburger', 'Boeuf, cheddar, salade, tomate, sauce', 8.50, 'cheeseburger.jpg', 2, 2),
+('Double Bacon Burger', 'Boeuf, bacon, cheddar, sauce BBQ', 10.99, 'double_bacon.jpg', 2, 2),
+('Spaghetti Carbonara', 'Pâtes, lardons, crème, parmesan', 12.00, 'carbonara.jpg', 2, 1),
+('Lasagnes', 'Pâtes, sauce tomate, viande hachée, béchamel', 14.50, 'lasagnes.jpg', 2, 1),
+('Tiramisu', 'Café, mascarpone, cacao', 6.50, 'tiramisu.jpg', 3, 1),
+('Panna Cotta', 'Crème vanille, coulis de fruits rouges', 5.50, 'panna_cotta.jpg', 3, 1),
+('Brownie', 'Chocolat noir, noix, caramel', 5.99, 'brownie.jpg', 3, 2);*/
+/*INSERT INTO users (nom, email, password, role) VALUES
+('Arthur Lagier', 'arthur@gmail.com', 'Burger', 'admin'),
+('Jean Modler', 'jean@gmail.com', 'madeumoizel', 'client'),
+('Marie janes', 'marie@gmail.com', 'pognon', 'client'),
+('Polo', 'polo@gmail.com', 'helloworld', 'client');*/
+/*INSERT INTO commandes (id_client, statut, id_paiement, paiement_effectue) VALUES
+(2, 'terminée', 1, TRUE),
+(3, 'en cours', 2, FALSE),
+(4, 'annulée', NULL, FALSE);*/
+/*INSERT INTO details_commande (id_commande, id_plat, quantite, prix_unitaire) VALUES
+(1, 2, 1, 10.99),
+(1, 3, 2, 12.99),
+(2, 5, 1, 10.99),
+(2, 7, 1, 14.50),
+(3, 9, 3, 5.50);*/
+SHOW TABLES;
+SELECT * FROM users;
+SELECT * FROM commandes;
+SELECT * FROM plats;
+SELECT commandes.id AS id_commande, users.nom AS client, commandes.date_commande, commandes.statut, modes_paiement.nom AS mode_paiement, commandes.paiement_effectue
+FROM commandes
+JOIN users ON commandes.id_client = users.id
+LEFT JOIN modes_paiement ON commandes.id_paiement = modes_paiement.id;
+SELECT details_commande.id_commande, plats.nom AS plat, details_commande.quantite, details_commande.prix_unitaire
+FROM details_commande
+JOIN plats ON details_commande.id_plat = plats.id;
