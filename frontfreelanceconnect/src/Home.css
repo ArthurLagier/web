@@ -1,0 +1,155 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+.textbox1{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    line-height: 100px;
+    top: 0px;
+    left: 200px;
+    color: black;
+}
+.textbox2{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    line-height: 100px;
+    top: 0px;
+    left: 600px;
+    color: black;
+}
+.textbox3{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    line-height: 100px;
+    top: 0px;
+    left: 1000px;
+    color: black;
+}
+
+.textbox4{
+    width: 400px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    text-align: center;
+    border-radius: 15%;
+    line-height: 100px;
+    top: 0px;
+    left: 1500px;
+}
+.textbox5{
+width: 700px;
+height: 150px;
+position: absolute;
+background-color: red;
+top: 900px;
+left: 200px;
+color: black;
+}
+.textbox6{
+    width: 700px;
+    height: 150px;
+    position: absolute;
+    background-color: red;
+    top: 900px;
+    left: 900px;
+    color: black;
+    }
+    .textbox7{
+        width: 700px;
+        height: 150px;
+        position: absolute;
+        background-color: red;
+        top: 1500px;
+        left: 600px;
+        color: black;
+        }
+        .textbox8{
+            width: 700px;
+            height: 150px;
+            position: absolute;
+            background-color: red;
+            font-size: 50px;
+            top: 2000px;
+            left: 1000px;
+            color: black;
+            }
+            .textbox9{
+                width: 700px;
+                height: 450px;
+                position: absolute;
+                background-color: red;
+                top: 2400px;
+                left: 1000px;
+                color: black;
+                }
+                .textbox10{
+                    width: 700px;
+                    height: 450px;
+                    position: absolute;
+                    background-color: red;
+                    top: 3000px;
+                    left: 200px;
+                    color: black;
+                    }
+                    .textbox11{
+                        width: 700px;
+                        height: 250px;
+                        position: absolute;
+                        background-color: red;
+                        font-size: 50px;
+                        top: 3800px;
+                        left: 200px;
+                        color: black;
+                        }
+                        .textbox12{
+                            width: 700px;
+                            height: 250px;
+                            position: absolute;
+                            background-color: red;
+                            top: 4200px;
+                            left: 200px;
+                            color: black;
+                            }
+                            .box{
+                                width: 1250px;
+                                height: 350px;
+                                position: absolute;
+                                background-color: #C7D4FF;
+                                ;
+                                top: 4600px;
+                                left: 350px;
+                                color: black;
+                                }
+                                .textbox13{
+                                    width: 200px;
+                                    height: 150px;
+                                    position: absolute;
+                                    background-color: red;
+                                    font-size: 10px;
+                                    top: 4700px;
+                                    left: 400px;
+                                    color: black;
+                                    }
+                                    .textbox13{
+                                        width: 200px;
+                                        height: 150px;
+                                        position: absolute;
+                                        background-color: red;
+                                        font-size: 12px;
+                                        top: 4700px;
+                                        left: 400px;
+                                        color: black;
+                                        }
+.boxtext{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+}
