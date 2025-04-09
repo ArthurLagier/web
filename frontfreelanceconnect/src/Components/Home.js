@@ -1,7 +1,7 @@
 import React from "react";
 import '../Home.css';
 function Home(){return(<>
-    
+    <img src="Rectangle 2.png" alt="hel"></img>
     <div className="textbox1">Comment ça marche</div>
     <div className="textbox2">Paiements</div>
     <div className="textbox3">Contacts</div>
@@ -9,6 +9,7 @@ function Home(){return(<>
     <div  className="textbox5">Quoi?<p>Métier , Entreprise , ect .</p></div>
     <div  className="textbox6">où?<p>Quelle Entreprise</p></div>
     <div className="textbox7">Ils Nous Font Confiance</div>
+    <img src="Rectangle 6.png" alt="hell"></img>
     <div className="textbox8">Devenir Freelancer<p>Avec Nous</p></div>
     <div className="textbox9">Notre plateforme de freelance connecte des professionnels talentueux avec des entreprises à la recherche de services de qualité. 
         Que vous soyez un freelance à la recherche de projets passionnants ou un client en quête d'experts qualifiés, notre plateforme facilite le recrutement et la collaboration.
