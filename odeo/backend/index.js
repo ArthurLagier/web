@@ -4,12 +4,12 @@ import cors from "cors";
 import gameRoutes from "./routes/gameRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import pool from "./config/mysql.js";
+import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 9090;
-
 
 app.use(cors({
   origin: "http://localhost:8787",
@@ -21,11 +21,12 @@ app.use(express.json());
 
 app.get("/", (_req, res) => res.send("Hello world"));
 
-
+// Routes
 app.use("/games", gameRoutes);
 app.use("/users", userRoutes);
+app.use("/auth", authRoutes);
 
-
+// Démarrage
 (async () => {
   try {
     const cx = await pool.getConnection();

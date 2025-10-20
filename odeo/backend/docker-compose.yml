@@ -1,30 +1,36 @@
 services:
+  db:
+    image: mysql:8.4
+    container_name: odeo-mysql
+    environment:
+      MYSQL_DATABASE: odeo
+      MYSQL_ROOT_PASSWORD: B13nv3nu3_Lag13r
+      MYSQL_ROOT_HOST: '%'          # autorise root depuis le réseau du compose
+   # ports:
+    #  - "3306:3306"
+    volumes:
+      - backend_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pB13nv3nu3_Lag13r"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     container_name: odeo-backend
+    environment:
+      PORT: 9090
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: B13nv3nu3_Lag13r
+      DB_DATABASE: odeo
+    depends_on:
+      db:
+        condition: service_healthy      # <-- attend que MySQL soit prêt
+    command: ["npm","run","dev"]
     ports:
       - "9090:9090"
-    env_file:
-      - .env
-    depends_on:
-      - db
-    volumes:
-      - .:/app
-      - /app/node_modules # Empêche les conflits node_modules entre ta machine et Docker
-
-  db:
-    image: mysql:8
-    container_name: odeo-mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_DATABASE}
-    ports:
-      - "3307:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
 
 volumes:
-  mysql_data:
+  backend_mysql_data:
