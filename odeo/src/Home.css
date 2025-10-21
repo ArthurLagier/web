@@ -17,17 +17,23 @@
 }
 
 .Login{
-    width: 400px;
+    width: 100px;
     height:100px;
-    left: 1300px;
+    left: 1500px;
     top: 0px;
     position: absolute;
 }
 
 .Register{
-    width: 400px;
+    width: 100px;
     height:100px;
-    left: 1400px;
+    left: 1600px;
     top: 0px;
     position: absolute;
+}
+
+.logo-odeo {
+  position: absolute;
+  top: 20px;
+  left: 120px;
 }

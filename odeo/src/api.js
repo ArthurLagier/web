@@ -1,11 +1,11 @@
-const BASE = 'http://localhost:9090'; // <— au lieu de '/api'
+const BASE = 'http://localhost:9090';
 
-export async function api(
-  path,
-  { method = 'GET', body, token } = {}
-) {
+const getStoredToken = () => localStorage.getItem('token') || '';
+
+export async function api(path, { method = 'GET', body, token } = {}) {
   const headers = { 'Content-Type': 'application/json' };
-  if (token) headers.Authorization = `Bearer ${token}`;
+  const t = token ?? getStoredToken();
+  if (t) headers.Authorization = `Bearer ${t}`;
 
   const res = await fetch(`${BASE}${path}`, {
     method,
@@ -13,7 +13,6 @@ export async function api(
     body: body ? JSON.stringify(body) : undefined,
   });
 
-  // tente JSON puis repli en texte
   let payload;
   try {
     payload = await res.json();

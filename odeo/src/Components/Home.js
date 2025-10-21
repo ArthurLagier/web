@@ -16,11 +16,11 @@ function Home() {
   return (
     
     <div className="catalogue">
-        <div className="Block"></div>
   <div className="Navbar">WELCOME</div>
   <Link to="/login" className="Login">Login</Link>
   <Link to="/register" className="Register">Register</Link>
-  <img src="Logo Ode-o.png" alt="odeo"></img>
+  <img src="Logo Ode-o.png" alt="odeo" className="logo-odeo"></img>
+  <br></br>
       <h1>Catalogue de jeux</h1>
       <div className="games-grid">
         {games.map(game => (

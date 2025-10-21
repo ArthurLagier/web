@@ -37,7 +37,6 @@ export const login = async (req, res) => {
     const ok = await bcrypt.compare(password, user.password);
     if (!ok) return res.status(401).json({ error: 'Identifiants invalides' });
 
-    // tu peux omettre le hash dans la réponse
     delete user.password;
     const token = signToken(user);
     res.json({ user, token });
@@ -54,4 +53,17 @@ export const me = async (req, res) => {
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
+  
 };
+
+export async function deleteMe(req, res) {
+  try {
+    const userId = req.user.id;            // middleware auth 
+    await pool.query('DELETE FROM users WHERE id = ?', [userId]);
+    return res.status(204).send();         
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'Suppression impossible' });
+  }
+}
+

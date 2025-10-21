@@ -27,7 +27,7 @@ services:
       DB_DATABASE: odeo
     depends_on:
       db:
-        condition: service_healthy      # <-- attend que MySQL soit prêt
+        condition: service_healthy      # attend que MySQL soit prêt
     command: ["npm","run","dev"]
     ports:
       - "9090:9090"
