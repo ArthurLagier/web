@@ -37,3 +37,29 @@
   top: 20px;
   left: 120px;
 }
+.as-link {
+    position: relative;
+    left: 780px;
+    top: -40px;
+}
+
+.games-grid {
+  display: flex;           /* Active Flexbox */
+  flex-wrap: wrap;         /* Permet de passer à la ligne */
+  justify-content: center; /* Centre les cartes au milieu de l'écran */
+  gap: 30px;               /* Espace de 30px entre les cartes */
+  
+  /* IMPORTANT : Comme ta navbar est en absolute, il faut pousser
+     la grille vers le bas pour ne pas qu'elle soit cachée derrière */
+  margin-top: 150px;       
+  padding: 20px;
+}
+
+.game-card a {
+  text-decoration: none;
+  color: inherit; /* Garde la couleur du texte normale */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

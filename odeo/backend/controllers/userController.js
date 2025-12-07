@@ -1,5 +1,6 @@
 import pool from '../config/mysql.js';
 import bcrypt from 'bcrypt';
+import { isPasswordStrong } from '../utils/validation.js'; // 👈 Importer la fonction
 
 const PUBLIC_FIELDS = 'id, nom, email, role';
 
@@ -36,7 +37,11 @@ export const createUser = async (req, res) => {
     if (!nom || !email || !password) {
       return res.status(400).json({ error: 'nom, email et password sont requis' });
     }
-
+    if (!isPasswordStrong(password)) {
+      return res.status(400).json({
+        error: 'Le mot de passe ne respecte pas les conditions de sécurité.',
+      });
+    }
     const hash = await bcrypt.hash(password, 10);
     const [result] = await pool.query(
       'INSERT INTO users (nom, email, password, role) VALUES (?, ?, ?, ?)',
@@ -65,7 +70,11 @@ export const updateUser = async (req, res) => {
 
     if (nom !== undefined) { fields.push('nom = ?'); values.push(nom); }
     if (email !== undefined) { fields.push('email = ?'); values.push(email); }
-    if (password !== undefined) {
+    if (password !== undefined) { if (!isPasswordStrong(password)) {
+        return res.status(400).json({
+          error: 'Le mot de passe ne respecte pas les conditions de sécurité.',
+        });
+      }
       const hash = await bcrypt.hash(password, 10);
       fields.push('password = ?'); values.push(hash);
     }

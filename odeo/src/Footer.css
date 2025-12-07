@@ -1,0 +1,49 @@
+.footer-container {
+  background-color: #222; /* Fond sombre */
+  color: #fff;            /* Texte blanc */
+  padding-top: 40px;
+  margin-top: 50px;       /* Pour ne pas coller au contenu du dessus */
+  width: 100%;
+}
+
+/* Conteneur des 3 colonnes */
+.footer-content {
+  display: flex;          /* Active Flexbox */
+  justify-content: space-around; /* Espace égal entre les colonnes */
+  flex-wrap: wrap;        /* Passe à la ligne sur mobile */
+  max-width: 1200px;
+  margin: 0 auto;         /* Centre le contenu */
+  padding-bottom: 20px;
+}
+
+/* Chaque colonne */
+.footer-section {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: #ffcc00; /* Une petite couleur jaune pour les titres */
+  margin-bottom: 15px;
+}
+
+/* Style des liens dans le footer */
+.footer-section a {
+  display: block;        /* Un lien par ligne */
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff;           /* Devient blanc au survol */
+}
+
+/* La petite ligne de copyright tout en bas */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background-color: #111; /* Un peu plus foncé que le reste */
+  font-size: 0.9rem;
+}

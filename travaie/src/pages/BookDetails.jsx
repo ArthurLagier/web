@@ -5,7 +5,7 @@ import Comments from "./Comments";
 
 const isUrl = (s = "") => /^https?:\/\//i.test(s);
 
-export default function GameDetails() {
+export default function BookDetails() {
   const { id } = useParams();
   const [game, setGame] = useState(null);
 

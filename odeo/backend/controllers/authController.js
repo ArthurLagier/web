@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import pool from '../config/mysql.js';
+import { isPasswordStrong } from '../utils/validation.js'; // 👈 Importer la fonction
 
 const signToken = (user) =>
   jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, {
@@ -9,6 +10,11 @@ const signToken = (user) =>
 
 export const register = async (req, res) => {
   const { nom, email, password } = req.body;
+  if (!isPasswordStrong(password)) {
+    return res.status(400).json({
+      error: 'Le mot de passe ne respecte pas les conditions de sécurité. (min 12 caractères, 1 majuscule, 1 minuscule, 1 chiffre, 1 caractère spécial)',
+    });
+  }
   try {
     const [exist] = await pool.query('SELECT id FROM users WHERE email=?', [email]);
     if (exist.length) return res.status(409).json({ error: 'Email déjà pris' });
