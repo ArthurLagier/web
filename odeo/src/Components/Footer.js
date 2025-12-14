@@ -24,7 +24,7 @@ function Footer() {
         {/* Colonne 3 : Contact */}
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>support@odeo.com</p>
+          <p><Link to="/contact">Formulaire de contact</Link></p>
           <p>12 Rue du Gaming, Paris</p>
         </div>
 

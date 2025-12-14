@@ -1,0 +1,96 @@
+/* La barre complète */
+.main-navbar {
+  display: flex;
+  justify-content: space-between; /* Ecarte gauche et droite au max */
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a1a; /* Fond légèrement plus clair que le site */
+  /* Petite ligne bleue stylée */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* --- PARTIE GAUCHE --- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #61dafb; /* Logo en bleu */
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ffffff; /* FORCE LE TEXTE EN BLANC */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #61dafb; /* Bleu au survol */
+}
+
+/* --- PARTIE DROITE (BOUTONS) --- */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.guest-menu, .user-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-text {
+  color: white;
+  margin-right: 10px;
+}
+
+/* Style général des boutons du menu */
+.nav-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+/* Couleurs spécifiques */
+.login-btn {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.login-btn:hover { background-color: rgba(255,255,255,0.1); }
+
+.register-btn {
+  background-color: #61dafb;
+  color: #1a1a1a;
+}
+.register-btn:hover { background-color: #4fa8c7; }
+
+.logout-btn {
+  background-color: #444;
+  color: white;
+}
+.logout-btn:hover { background-color: #666; }
+
+.delete-btn {
+  background-color: #e74c3c; /* Rouge */
+  color: white;
+}
+.delete-btn:hover { background-color: #c0392b; }

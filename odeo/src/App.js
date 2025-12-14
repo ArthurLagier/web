@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './auth/AuthContext';
 
 import Home from './Components/Home';
@@ -7,19 +7,20 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import GameDetails from './pages/GameDetails';
 import NewGame from './pages/NewGame';
+import Footer from './Components/Footer';
+import Contact from './pages/Contact';
+import Navbar from './pages/Navbar'; // 👈 IMPORT DU NOUVEAU COMPOSANT
 
 function App() {
   return (
     <AuthProvider>
       <div className="App">
         <Router>
-          <header className="App-header">
-            <nav>
-              <Link to="/">Home</Link> |{' '}
-           <Link to="/login">Login</Link> |{" "}
-            <Link to="/register">Register</Link> |{" "}
-            <Link to="/new-game">Ajouter un jeu</Link>
-            </nav>
+          
+          <div className="site-content">
+            
+            {/* 👇 ON REMPLACE L'ANCIEN HEADER PAR ÇA */}
+            <Navbar /> 
 
             <Routes>
               <Route path="/" element={<Home />} />
@@ -27,8 +28,13 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/new-game" element={<NewGame />} />
               <Route path="/game/:id" element={<GameDetails />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
-          </header>
+
+          </div>
+
+          <Footer />
+
         </Router>
       </div>
     </AuthProvider>

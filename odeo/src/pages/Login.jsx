@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { api } from '../api';
+import {useNavigate} from 'react-router-dom';
 
 export default function Login() {
   const [form, setForm] = useState({ email:'', password:'' });
   const [msg, setMsg] = useState('');
+  const navigate = useNavigate();
 
   const submit = async (e) => {
     e.preventDefault();
@@ -11,6 +13,7 @@ export default function Login() {
       const { user, token } = await api('/auth/login', { method:'POST', body: form });
       localStorage.setItem('token', token);
       setMsg(`Connecté: ${user.nom}`);
+      navigate('/');
     } catch (e) { setMsg(e.message); }
   };
 

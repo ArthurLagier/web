@@ -5,6 +5,7 @@ import gameRoutes from "./routes/gameRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import pool from "./config/mysql.js";
 import authRoutes from './routes/authRoutes.js';
+import { sendContactEmail } from './controllers/contactController.js';
 
 dotenv.config();
 
@@ -20,11 +21,15 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/", (_req, res) => res.send("Hello world"));
+// ... suite du code ...
+
+app.get("/", (_req, res) => res.send("Hello world"));
 
 // Routes
 app.use("/games", gameRoutes);
 app.use("/users", userRoutes);
 app.use("/auth", authRoutes);
+app.post('/contact', sendContactEmail);
 
 // Démarrage
 (async () => {
