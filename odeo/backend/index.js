@@ -19,10 +19,6 @@ app.use(cors({
 }));
 
 app.use(express.json());
-
-app.get("/", (_req, res) => res.send("Hello world"));
-// ... suite du code ...
-
 app.get("/", (_req, res) => res.send("Hello world"));
 
 // Routes

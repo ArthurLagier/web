@@ -1,4 +1,3 @@
-/* Conteneur global */
 .comments-container {
   margin-top: 40px;
   border-top: 1px solid #444;
@@ -8,10 +7,10 @@
 
 .comments-container h3 {
   margin-bottom: 20px;
-  color: #61dafb; /* Le bleu React de ton site */
+  color: #61dafb;
 }
 
-/* --- FORMULAIRE --- */
+
 .comment-form {
   background-color: #282c34;
   padding: 15px;
@@ -36,7 +35,7 @@
 }
 
 .comment-input {
-  flex: 1; /* Prend toute la largeur dispo */
+  flex: 1;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #555;
@@ -64,18 +63,18 @@
   cursor: not-allowed;
 }
 
-/* --- LISTE DES COMMENTAIRES (CARTES) --- */
+
 .comments-list {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espace entre les commentaires */
+  gap: 15px; 
 }
 
 .comment-card {
-  background-color: #222; /* Fond un peu plus foncé que la page */
+  background-color: #222; 
   border-radius: 8px;
   padding: 15px;
-  border-left: 4px solid #61dafb; /* Petite barre de couleur à gauche */
+  border-left: 4px solid #61dafb; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -88,7 +87,7 @@
 
 .comment-author {
   font-weight: bold;
-  color: #ffcc00; /* Jaune/Or pour le nom */
+  color: #ffcc00; 
   font-size: 1rem;
 }
 

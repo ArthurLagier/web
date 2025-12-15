@@ -30,6 +30,7 @@ export default function Navbar() {
           <Link to="/">Home</Link>
           <Link to="/new-game">Ajouter un jeu</Link>
         </div>
+        <div className="Welcome">Bienvenue à O-deo</div>
       </div>
 
       {/* PARTIE DROITE : Authentification */}

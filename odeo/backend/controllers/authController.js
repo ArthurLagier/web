@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import pool from '../config/mysql.js';
-import { isPasswordStrong } from '../utils/validation.js'; // 👈 Importer la fonction
+import { isPasswordStrong } from '../utils/validation.js';
 
 const signToken = (user) =>
   jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, {

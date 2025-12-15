@@ -1,0 +1,7 @@
+.game-card{
+  transition: color 0.2s;
+}
+
+.game-card:hover{
+    color: #61dafb;
+}

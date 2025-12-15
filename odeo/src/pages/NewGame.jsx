@@ -22,7 +22,7 @@ export default function NewGame() {
     setMsg('');
     setBusy(true);
     try {
-      // cast prix en nombre et ids en entier
+      // cast prix nombre et ids entier
       const body = {
         ...form,
         prix: Number(form.prix),
@@ -31,7 +31,7 @@ export default function NewGame() {
       };
       const game = await api('/games', { method: 'POST', body });
       setMsg('Jeu créé');
-      // Redirige vers la fiche jeu
+      // Redirige fiche jeu
       setTimeout(() => navigate(`/game/${game.id}`), 600);
     } catch (err) {
       setMsg(err.message || 'Erreur lors de la création');
@@ -39,7 +39,7 @@ export default function NewGame() {
       setBusy(false);
     }
   };
-
+/*Formulaire informations*/
   return (
     <div style={{ maxWidth: 640, margin: '2rem auto' }}>
       <h1>Nouveau jeu</h1>

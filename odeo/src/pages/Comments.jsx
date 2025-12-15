@@ -4,14 +4,14 @@ import {
   onSnapshot, addDoc, serverTimestamp
 } from 'firebase/firestore';
 import { db } from '../firebase';
-import { useAuth } from '../auth/AuthContext'; // 👈 Import du contexte Auth
-import '../Comments.css'; // 👈 On va créer ce fichier CSS
+import { useAuth } from '../auth/AuthContext';
+import '../Comments.css';
 
 export default function Comments({ gameId }) {
   const [comments, setComments] = useState([]);
   const [text, setText] = useState('');
   
-  // Récupération de l'utilisateur connecté
+  // user connecté
   const { user } = useAuth();
 
   useEffect(() => {
@@ -27,21 +27,21 @@ export default function Comments({ gameId }) {
     e.preventDefault();
     if (!text.trim()) return;
 
-    // On utilise le nom de l'user connecté, ou "Anonyme" si pas connecté
+    // nom user ou Anonyme
     const authorName = user ? user.nom : 'Anonyme';
 
     await addDoc(collection(db, 'games', String(gameId), 'comments'), {
       author: authorName,
       text: text.trim(),
       createdAt: serverTimestamp(),
-      userId: user ? user.id : null // Optionnel : utile si tu veux modérer plus tard
+      userId: user ? user.id : null // pour récuperer l'id si user null
     });
     setText('');
   };
 
-  // Petite fonction pour formater la date proprement
+  // Date
   const formatDate = (timestamp) => {
-    if (!timestamp) return ''; // Gère le délai de latence Firebase
+    if (!timestamp) return '';
     return timestamp.toDate().toLocaleDateString('fr-FR', {
       day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit'
     });
@@ -51,10 +51,9 @@ export default function Comments({ gameId }) {
     <div className="comments-container">
       <h3>Commentaires ({comments.length})</h3>
 
-      {/* Formulaire : On affiche l'input seulement si on est connecté, ou on laisse ouvert à tous */}
+      {/*prend le nom uttilisateur pour le commentaire*/}
       <form onSubmit={submit} className="comment-form">
         <div className="input-group">
-          {/* On affiche qui va poster */}
           <span className="posting-as">
             Postera en tant que : <strong>{user ? user.nom : 'Anonyme'}</strong>
           </span>
@@ -73,7 +72,7 @@ export default function Comments({ gameId }) {
         </div>
       </form>
 
-      {/* Liste des commentaires (Plus de <ul> moche !) */}
+      {/* Liste commentaires*/}
       <div className="comments-list">
         {comments.map(c => (
           <div key={c.id} className="comment-card">

@@ -17,7 +17,7 @@ function Contact() {
     try {
       await api('/contact', { method: 'POST', body: form });
       setStatus('Message envoyé ! Nous vous répondrons bientôt.');
-      setForm({ nom: '', email: '', message: '' }); // Vider le formulaire
+      setForm({ nom: '', email: '', message: '' }); // Reset formulaire après envoie
     } catch (err) {
       setStatus("Erreur lors de l'envoi. Réessayez plus tard.");
     }
@@ -27,7 +27,7 @@ function Contact() {
     <div className="contact-page">
       <h1>Contactez-nous</h1>
       <p>Un problème ? Une suggestion ? Écrivez-nous !</p>
-      
+      {/*Cases formulaire, nom, email et message*/}
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Votre Nom</label>

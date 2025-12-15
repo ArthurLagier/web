@@ -44,32 +44,67 @@
 }
 
 .games-grid {
-  display: flex;           /* Active Flexbox */
-  flex-wrap: wrap;         /* Permet de passer à la ligne */
-  justify-content: center; /* Centre les cartes au milieu de l'écran */
-  gap: 30px;               /* Espace de 30px entre les cartes */
-  
-  /* IMPORTANT : Comme ta navbar est en absolute, il faut pousser
-     la grille vers le bas pour ne pas qu'elle soit cachée derrière */
+  display: flex;      
+  flex-wrap: wrap;      
+  justify-content: center; 
+  gap: 30px;              
   margin-top: 150px;       
   padding: 20px;
-  margin-bottom: 40px; /* Espace après chaque groupe de jeux */
+  margin-bottom: 40px;
 }
 
 .game-card a {
   text-decoration: none;
-  color: inherit; /* Garde la couleur du texte normale */
+  color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 .section-title {
-  width: 90%;          /* S'aligne avec le reste */
-  text-align: left;    /* Texte à gauche */
-  margin-top: 50px;    /* Espace au dessus */
-  margin-bottom: 20px; /* Espace en dessous */
-  border-bottom: 2px solid #61dafb; /* Une petite ligne bleue sous le titre pour faire pro */
+  width: 90%;         
+  text-align: left;    
+  margin-top: 50px;   
+  margin-bottom: 20px; 
+  border-bottom: 2px solid #61dafb; 
   padding-bottom: 10px;
   color: #fff;
 }
+
+.cart-summary {
+    background-Color: '#2c3e50';
+    color: 'white';
+    padding: '20px';
+    margin: '20px auto';
+    border-Radius: '10px';
+    max-Width: '600px';
+    border: '2px solid #61dafb'
+  }
+  .cart-Item {
+    display: 'flex';
+    justify-Content: 'space-between';
+    padding: '10px 0';
+    border-Bottom: '1px solid #444';
+  }
+  .removeBtn {
+    margin-left: 10px;
+    background: 'transparent';
+    border: 'none';
+    cursor: 'pointer';
+    background-color: white;
+  }
+  .cartFooter {
+    margin-Top: '20px';
+    text-Align: 'right';
+  }
+  .payBtn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  }

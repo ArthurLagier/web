@@ -1,10 +1,10 @@
 import pool from '../config/mysql.js';
 import bcrypt from 'bcrypt';
-import { isPasswordStrong } from '../utils/validation.js'; // 👈 Importer la fonction
+import { isPasswordStrong } from '../utils/validation.js';
 
 const PUBLIC_FIELDS = 'id, nom, email, role';
 
-
+//Get all users
 export const getAllUsers = async (_req, res) => {
   try {
     const [rows] = await pool.query(`SELECT ${PUBLIC_FIELDS} FROM users`);
@@ -15,7 +15,7 @@ export const getAllUsers = async (_req, res) => {
   }
 };
 
-
+//Get user by id 
 export const getUserById = async (req, res) => {
   const { id } = req.params;
   try {
@@ -30,7 +30,7 @@ export const getUserById = async (req, res) => {
   }
 };
 
-
+//Create user
 export const createUser = async (req, res) => {
   try {
     const { nom, email, password, role = 'client' } = req.body;
@@ -58,7 +58,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-
+//Update user
 export const updateUser = async (req, res) => {
   const { id } = req.params;
   let { nom, email, password, role } = req.body;
@@ -104,7 +104,7 @@ export const updateUser = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
+//Delete user
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
   try {

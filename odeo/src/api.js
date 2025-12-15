@@ -1,5 +1,4 @@
 const BASE = 'http://localhost:9090';
-
 const getStoredToken = () => localStorage.getItem('token') || '';
 
 export async function api(path, { method = 'GET', body, token } = {}) {

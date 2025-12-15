@@ -1,35 +1,33 @@
 .footer-container {
-  background-color: #222; /* Fond sombre */
-  color: #fff;            /* Texte blanc */
+  background-color: #222;
+  color: #fff;
   padding-top: 40px;
-  margin-top: 50px;       /* Pour ne pas coller au contenu du dessus */
+  margin-top: 50px;
   width: 100%;
 }
 
-/* Conteneur des 3 colonnes */
+
 .footer-content {
-  display: flex;          /* Active Flexbox */
-  justify-content: space-around; /* Espace égal entre les colonnes */
-  flex-wrap: wrap;        /* Passe à la ligne sur mobile */
+  display: flex;        
+  justify-content: space-around;
+  flex-wrap: wrap;  
   max-width: 1200px;
-  margin: 0 auto;         /* Centre le contenu */
+  margin: 0 auto;   
   padding-bottom: 20px;
 }
 
-/* Chaque colonne */
 .footer-section {
   min-width: 200px;
   margin-bottom: 20px;
 }
 
 .footer-section h3, .footer-section h4 {
-  color: #ffcc00; /* Une petite couleur jaune pour les titres */
+  color: #ffcc00;
   margin-bottom: 15px;
 }
 
-/* Style des liens dans le footer */
 .footer-section a {
-  display: block;        /* Un lien par ligne */
+  display: block;  
   color: #ccc;
   text-decoration: none;
   margin-bottom: 8px;
@@ -37,13 +35,12 @@
 }
 
 .footer-section a:hover {
-  color: #fff;           /* Devient blanc au survol */
+  color: #fff;
 }
 
-/* La petite ligne de copyright tout en bas */
 .footer-bottom {
   text-align: center;
   padding: 15px;
-  background-color: #111; /* Un peu plus foncé que le reste */
+  background-color: #111;
   font-size: 0.9rem;
 }

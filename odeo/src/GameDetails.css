@@ -1,29 +1,27 @@
-/* Le conteneur global de la page pour éviter que ça colle aux bords */
 .game-details-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  color: white; /* S'assure que le texte est lisible sur fond sombre */
+  color: white;
 }
 
-/* --- LE FLEXBOX MAGIQUE --- */
 .game-hero {
-  display: flex;            /* Active les colonnes */
-  justify-content: space-between; /* Ecarte le texte et l'image */
-  align-items: flex-start;  /* Aligne tout en haut */
-  gap: 60px;                /* Espace entre le texte et l'image */
-  margin-bottom: 80px;      /* Espace avant les commentaires */
+  display: flex;            
+  justify-content: space-between; 
+  align-items: flex-start;  
+  gap: 60px;               
+  margin-bottom: 80px;
 }
 
-/* --- COLONNE GAUCHE (TEXTE) --- */
+
 .game-info {
-  flex: 1; /* Prend tout l'espace disponible */
+  flex: 1;
 }
 
 .game-info h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #61dafb; /* Bleu React sympa, ou change pour ta couleur préférée */
+  color: #61dafb;
   line-height: 1.2;
 }
 
@@ -32,25 +30,25 @@
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 30px;
-  white-space: pre-line; /* Conserve les sauts de ligne s'il y en a dans ta DB */
+  white-space: pre-line;
 }
 
-/* La zone prix et bouton */
+
 .buy-section {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-top: 30px;
-  background-color: #282c34; /* Petit fond pour encadrer le prix */
+  background-color: #282c34;
   padding: 20px;
   border-radius: 10px;
-  width: fit-content; /* S'adapte au contenu */
+  width: fit-content;
 }
 
 .price {
   font-size: 2rem;
   font-weight: bold;
-  color: #ffcc00; /* Jaune pour l'argent */
+  color: #ffcc00;
 }
 
 .buy-btn {
@@ -69,26 +67,25 @@
   background-color: #4fa8c7;
 }
 
-/* --- COLONNE DROITE (IMAGE) --- */
+
 .game-visual {
-  flex: 1; /* Prend aussi de l'espace */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* Pousse l'image vers la droite */
+  justify-content: flex-end;
 }
 
 .game-cover {
   max-width: 100%;
-  width: 500px; /* Taille idéale, mais responsive */
+  width: 500px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Belle ombre portée */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   object-fit: cover;
 }
 
-/* --- RESPONSIVE (POUR MOBILE) --- */
-/* Si l'écran est plus petit que 768px (tablette/mobile), on empile tout */
+/*écran <768px (tablette/mobile):empile */
 @media (max-width: 768px) {
   .game-hero {
-    flex-direction: column-reverse; /* Image au dessus, texte en dessous ? ou l'inverse */
+    flex-direction: column-reverse;
     gap: 30px;
   }
   

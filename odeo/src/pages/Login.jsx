@@ -19,10 +19,10 @@ export default function Login() {
 
   return (
     <form onSubmit={submit}>
-      <input placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})}/>
-      <input placeholder="Mot de passe" type="password" value={form.password}
-             onChange={e=>setForm({...form, password:e.target.value})}/>
-      <button type="submit">Se connecter</button>
+      <div className='inputtext'><input placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})}/></div>
+      <div className='inputtext'><input placeholder="Mot de passe" type="password" value={form.password}
+             onChange={e=>setForm({...form, password:e.target.value})}/></div>
+      <div className='btn'><button type="submit">Se connecter</button></div>
       <div>{msg}</div>
     </form>
   );

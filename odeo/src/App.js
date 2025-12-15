@@ -9,17 +9,17 @@ import GameDetails from './pages/GameDetails';
 import NewGame from './pages/NewGame';
 import Footer from './Components/Footer';
 import Contact from './pages/Contact';
-import Navbar from './pages/Navbar'; // 👈 IMPORT DU NOUVEAU COMPOSANT
-
+import Navbar from './pages/Navbar';
+import { CartProvider } from './auth/CartContext';
+import Payment from './pages/Payment'; 
 function App() {
   return (
     <AuthProvider>
+      <CartProvider>
       <div className="App">
         <Router>
           
           <div className="site-content">
-            
-            {/* 👇 ON REMPLACE L'ANCIEN HEADER PAR ÇA */}
             <Navbar /> 
 
             <Routes>
@@ -29,6 +29,7 @@ function App() {
               <Route path="/new-game" element={<NewGame />} />
               <Route path="/game/:id" element={<GameDetails />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/payment" element={<Payment />} />
             </Routes>
 
           </div>
@@ -37,6 +38,7 @@ function App() {
 
         </Router>
       </div>
+      </CartProvider>
     </AuthProvider>
   );
 }

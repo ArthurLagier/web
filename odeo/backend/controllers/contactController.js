@@ -1,8 +1,4 @@
 import nodemailer from 'nodemailer';
-
-// On n'initialise pas le transporter ici pour éviter le bug du .env vide
-// const transporter = ... (SUPPRIME ÇA D'ICI)
-
 export const sendContactEmail = async (req, res) => {
   const { nom, email, message } = req.body;
 
@@ -10,8 +6,7 @@ export const sendContactEmail = async (req, res) => {
     return res.status(400).json({ error: 'Tous les champs sont requis.' });
   }
 
-  // 👇 CRÉE LE TRANSPORTEUR ICI (À L'INTÉRIEUR)
-  // Cela garantit que process.env.GMAIL_PASS est bien chargé
+  // Pour contacter
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

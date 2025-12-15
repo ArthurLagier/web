@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import '../Home.css';
 import GameCard from '../GameCard';
 import { api } from '../api';
-// On n'a plus besoin de useAuth ni Link ici pour le header
+import { useCart } from '../auth/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [games, setGames] = useState([]);
-  
-  // On ne récupère plus 'user' ni 'logout' ici, c'est dans la Navbar
+  const { cart, removeFromCart, total } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
     api('/games')
@@ -15,21 +16,33 @@ function Home() {
       .catch(err => console.error('Erreur de chargement des jeux :', err));
   }, []);
 
-  // La fonction deleteAccount a été déplacée dans Navbar.js
-
-  // --- LOGIQUE DE TRI ---
+  //Logique tri
   const nouveautes = [...games].reverse().slice(0, 4);
   const promos = games.filter(game => game.prix < 10);
   const classiques = games.slice(0, 4);
 
   return (
     <div className="catalogue">
-
-      {/* J'ai supprimé toute la div "auth-container" qui était ici */}
-
-      {/* Tu peux garder le gros logo si tu veux, ou l'enlever vu qu'il est dans la navbar */}
+      {cart.length > 0 && (
+        <div className="cart-summary">
+          <h2>Votre Panier ({cart.length} articles)</h2>
+          <div className="cart-items">
+            {cart.map(item => (
+              <div key={item.id} className="cart-Item">
+                <span>{item.nom}</span>
+                <span> {item.prix} €</span>
+                <button onClick={() => removeFromCart(item.id)} className="removeBtn">X</button>
+              </div>
+            ))}
+          </div>
+          <div className="cartFooter">
+            <h3>Total: {total.toFixed(2)} €</h3>
+            <button onClick={() => navigate('/payment')} className="payBtn">Payer</button>
+          </div>
+        </div>
+      )}
       
-      {/* --- SECTION NOUVEAUTÉS --- */}
+      {/*Nouveauté*/}
       <h2 className="section-title">Les Nouveautés</h2>
       <div className="games-grid">
         {nouveautes.map(game => (
@@ -37,7 +50,7 @@ function Home() {
         ))}
       </div>
 
-      {/* ... Le reste de tes sections (Promos, Classiques, Tout le catalogue) ... */}
+      {/*Bon prix*/}
       <h2 className="section-title">Bon prix</h2>
       <div className="games-grid">
         {promos.length > 0 ? (
@@ -46,14 +59,14 @@ function Home() {
           <p>Aucune promo en ce moment...</p>
         )}
       </div>
-
+        {/*Classiques*/}
        <h2 className="section-title">Les Classiques</h2>
       <div className="games-grid">
         {classiques.map(game => (
           <GameCard key={game.id} game={game} />
         ))}
       </div>
-
+        {/*Catalogue entier*/}
       <h2 className="section-title">Tout le catalogue</h2>
       <div className="games-grid">
         {games.map(game => (
