@@ -30,7 +30,7 @@ function Contact() {
       {/*Cases formulaire, nom, email et message*/}
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Votre Nom</label>
+          <label>Nom</label>
           <input 
             type="text" 
             name="nom" 
@@ -41,7 +41,7 @@ function Contact() {
         </div>
 
         <div className="form-group">
-          <label>Votre Email</label>
+          <label>Email</label>
           <input 
             type="email" 
             name="email" 

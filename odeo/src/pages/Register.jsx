@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api } from '../api';
+import '../Logreg.css';
 function isPasswordStrong(password) {
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\\[\]{};':"\\|,.<>\\/?]).{12,}$/;
   return passwordRegex.test(password);
@@ -42,29 +43,29 @@ export default function Register() {
 
   return (
     <form onSubmit={submit}>
-      <div><input
+      <div className='boxall'><div><input className='inputtext'
         placeholder="Nom"
         value={form.nom}
         onChange={(e) => setForm({ ...form, nom: e.target.value })}
       /></div>
-      <div><input
+      <div><input className='inputtext'
         placeholder="Email"
         value={form.email}
         onChange={(e) => setForm({ ...form, email: e.target.value })}
       /></div>
-      <div><input
+      <div><input className='inputtext'
         placeholder="Mot de passe"
         type="password"
         value={form.password}
         onChange={handlePasswordChange}
-      /></div>
+      /></div></div>
       
       {/* Afficher erreur validation*/}
       {validationError && (
         <div style={{ color: 'red' }}>{validationError}</div>
       )}
       
-      <div><button type="submit">Créer mon compte</button></div>
+      <div><button className='btn' type="submit">Créer mon compte</button></div>
       
       {/*Affiche message succès/erreur l'API */}
       <div>{msg}</div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { api } from '../api';
 import {useNavigate} from 'react-router-dom';
+import '../Logreg.css';
 
 export default function Login() {
   const [form, setForm] = useState({ email:'', password:'' });
@@ -18,11 +19,11 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={submit}>
-      <div className='inputtext'><input placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})}/></div>
-      <div className='inputtext'><input placeholder="Mot de passe" type="password" value={form.password}
+    <form onSubmit={submit}><div className='boxall'>
+      <div><input className='inputtext' placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})}/></div>
+      <div><input className='inputtext' placeholder="Mot de passe" type="password" value={form.password}
              onChange={e=>setForm({...form, password:e.target.value})}/></div>
-      <div className='btn'><button type="submit">Se connecter</button></div>
+      <div><button className='btn' type="submit">Se connecter</button></div></div>
       <div>{msg}</div>
     </form>
   );
